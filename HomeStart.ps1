@@ -17,16 +17,16 @@ Start-Sleep -Seconds 2
 
 # === Proton Mail Desktop Client ===
 # Typischer Pfad (ggf. anpassen)
-$ProtonPath = "C:\Users\Stefa\AppData\Local\EcosiaBrowser\Application\chrome_proxy.exe  --profile-directory=Default --app-id=jnpecgipniidlgicjocehkhajgdnjekh"
+#$ProtonPath = "C:\Users\Stefa\AppData\Local\EcosiaBrowser\Application\chrome_proxy.exe  --profile-directory=Default --app-id=jnpecgipniidlgicjocehkhajgdnjekh"
 
-if (Test-Path $ProtonPath) {
-    Start-Process $ProtonPath
-}
-else {
-    Write-Warning "Proton Mail Client nicht gefunden – Pfad prüfen!"
-}
+#if (Test-Path $ProtonPath) {
+#    Start-Process $ProtonPath
+#}
+#else {
+ #   Write-Warning "Proton Mail Client nicht gefunden – Pfad prüfen!"
+#}
 
-Start-Sleep -Seconds 2
+#Start-Sleep -Seconds 2
 
 # === Outlook ===
 # Funktioniert in der Regel zuverlässig
