@@ -37,14 +37,4 @@ Start-Process "ms-outlook:"
 # === Explorer (Dieser PC) ===
 Start-Process "explorer.exe"
 
-# === OneDrive ===
-$OneDrivePath = "$env:LOCALAPPDATA\Microsoft\OneDrive\OneDrive.exe"
-
-if (Test-Path $OneDrivePath) {
-    Start-Process $OneDrivePath
-}
-else {
-    Write-Warning "OneDrive nicht gefunden oder bereits gestartet."
-}
-
 Write-Host "✅ Home-Automatisierung abgeschlossen" -ForegroundColor Green
