@@ -1,4 +1,4 @@
-Write-Host "IT-Update wird gestartet..." -ForegroundColor Red
+﻿Write-Host "IT-Update wird gestartet..." -ForegroundColor Red
 
 # === GitHub Trending ===
 $EcosiaPath = "C:\Users\Stefa\AppData\Local\EcosiaBrowser\Application\ecosiabrowser.exe"

@@ -1,4 +1,4 @@
-Write-Host "🏠 Home-Automatisierung wird gestartet..." -ForegroundColor Cyan
+﻿Write-Host "🏠 Home-Automatisierung wird gestartet..." -ForegroundColor Cyan
 
 # === Ecosia Browser ===
 # 👉 Falls der Pfad nicht stimmt:
@@ -9,11 +9,12 @@ if (Test-Path $EcosiaPath) {
     Start-Process $EcosiaPath "https://mail.google.com"
     Start-Process $EcosiaPath "https://email.t-online.de"
 }
+
 else {
     Write-Warning "Ecosia Browser nicht gefunden – Pfad prüfen!"
 }
 
-Start-Sleep -Seconds 2
+#Start-Sleep -Seconds 2
 
 # === Proton Mail Desktop Client ===
 # Typischer Pfad (ggf. anpassen)
