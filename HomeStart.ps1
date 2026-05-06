@@ -26,7 +26,9 @@ Start-Sleep -Seconds 2
  #   Write-Warning "Proton Mail Client nicht gefunden – Pfad prüfen!"
 #}
 
-#Start-Sleep -Seconds 2
+Start-Process "OneNote"
+
+Start-Sleep -Seconds 2
 
 # === Outlook ===
 # Funktioniert in der Regel zuverlässig
