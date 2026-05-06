@@ -40,5 +40,7 @@ else {
     Write-Warning "Further Internet Sources nicht gefunden – Pfad prüfen!"
 }
 
+# === Open Folder ===
+Start-Process "C:\Users\Stefa\OneDrive\IT"
 
 Write-Host "IT-Update ready" -ForegroundColor Green
