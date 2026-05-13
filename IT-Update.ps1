@@ -13,18 +13,30 @@ else {
 
 Start-Sleep -Seconds 2
 
-# === VSCode ===
-# Typischer Pfad (ggf. anpassen)
+
+# === VSCode (nur wenn nicht bereits geöffnet) ===
 $VSCodePath = "C:\Users\Stefa\AppData\Local\Programs\Microsoft VS Code\Code.exe"
 
-if (Test-Path $VSCodePath) {
-    Start-Process $VSCodePath
+if (-not (Get-Process -Name "Code" -ErrorAction SilentlyContinue)) {
+    if (Test-Path $VSCodePath) {
+        Start-Process $VSCodePath
+    }
+    else {
+        Write-Warning "VSCode nicht gefunden – Pfad prüfen!"
+    }
 }
 else {
-   Write-Warning "Proton Mail Client nicht gefunden – Pfad prüfen!"
+    Write-Host "⏩ VS Code läuft bereits" -ForegroundColor DarkGray
 }
 
-Start-Process "OneNote"
+
+# === OneNote (nur wenn nicht bereits geöffnet) ===
+if (-not (Get-Process -Name "ONENOTE" -ErrorAction SilentlyContinue)) {
+    Start-Process "ms-onenote:"
+} else {
+    Write-Host "⏩ OneNote läuft bereits" -ForegroundColor DarkGray
+}
+
 
 Start-Sleep -Seconds 2
 
